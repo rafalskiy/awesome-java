@@ -1,9 +1,22 @@
 pipeline {
-  agent any
+  agent none
   stages {
     stage('load account name') {
-      steps {
-        sh 'echo test'
+      parallel {
+        stage('load account name') {
+          steps {
+            sh 'echo test'
+          }
+        }
+        stage('') {
+          steps {
+            echo 'test'
+            dir(path: '/') {
+              isUnix()
+            }
+
+          }
+        }
       }
     }
   }
