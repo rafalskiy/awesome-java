@@ -8,13 +8,14 @@ pipeline {
             sh 'echo test'
           }
         }
-        stage('') {
+        stage('erdddd') {
           steps {
             echo 'test'
-            dir(path: '/') {
-              isUnix()
-            }
-
+          }
+        }
+        stage('') {
+          steps {
+            input(message: 'test', id: 'ssss', ok: 'sssss')
           }
         }
       }
