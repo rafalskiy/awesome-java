@@ -1,5 +1,5 @@
 pipeline {
-  agent none
+  agent any
   stages {
     stage('load account name') {
       parallel {
@@ -13,7 +13,7 @@ pipeline {
             echo 'test'
           }
         }
-        stage('') {
+        stage('error') {
           steps {
             input(message: 'test', id: 'ssss', ok: 'sssss')
           }
