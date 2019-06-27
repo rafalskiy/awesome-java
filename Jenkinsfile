@@ -5,7 +5,7 @@ pipeline {
       parallel {
         stage('load account name') {
           steps {
-            sh 'echo test'
+            sh 'ping localhost'
           }
         }
         stage('erdddd') {
